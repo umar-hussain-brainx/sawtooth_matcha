@@ -1,4 +1,4 @@
-
+<script>
 document.addEventListener('DOMContentLoaded', function() {
     // Add a click event listener to elements with class .subscribe_product
     const subscribeButtons = document.querySelectorAll('.subscribe_product');
@@ -7,31 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
            e.preventDefault();
             console.log('Subscribe product clicked');
-              let selectedPlan = document.querySelector('input[name="plan"]:checked');
-              let selectedFrequency = document.querySelector('.selling_plans').value;
+            let selectedPlan = document.querySelector('input[name="plan"]:checked');
+            let selectedFrequency = document.querySelector('.selling_plans').value;
+            let item; // Declare item variable here
+
             if (selectedPlan) {
                 if (selectedPlan.value.includes("39")) {
-                   let item = {
-                      "id": 40346541391985,
-                      "quantity": 1,
-                      "properties": {
-                          "shipping_interval_unit_type": "day",
-                          "shipping_interval_frequency": selectedFrequency // Set selected value as shipping_interval_frequency
-                      }
-                  };
-                  
-                }else{
-                  
-                  let item = {
-                    "id": 40346532937841,
-                    "quantity": 1,
-                  };
-                  
+                    item = {
+                        "id": 40346541391985,
+                        "quantity": 1,
+                        "properties": {
+                            "shipping_interval_unit_type": "day",
+                            "shipping_interval_frequency": selectedFrequency // Set selected value as shipping_interval_frequency
+                        }
+                    };
+                } else {
+                    item = {
+                        "id": 40346532937841,
+                        "quantity": 1,
+                    };
                 }
-
             }
             // Get the selected value from the select box
-      
        
             // Define the item object with custom properties
            
@@ -67,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+</script>
