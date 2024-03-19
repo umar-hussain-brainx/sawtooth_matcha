@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     subscribeButtons.forEach(button => {
         button.addEventListener('click', function(e) {
            e.preventDefault();
-            console.log('Subscribe product clicked');
+          
             let selectedPlan = document.querySelector('input[name="plan"]:checked');
             let selectedFrequency = document.querySelector('.selling_plans').value;
             let item; 
