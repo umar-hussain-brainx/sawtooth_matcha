@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Subscribe product clicked');
             let selectedPlan = document.querySelector('input[name="plan"]:checked');
             let selectedFrequency = document.querySelector('.selling_plans').value;
-            let item; // Declare item variable here
+            let item; 
 
             if (selectedPlan) {
                 if (selectedPlan.value.includes("39")) {
@@ -28,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     };
                 }
             }
-            // Get the selected value from the select box
-       
-            // Define the item object with custom properties
-           
 
             // Create a new XMLHttpRequest object
             let xhr = new XMLHttpRequest();
